@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Sign Up Gather</title>
+    <title>Guardian Portal</title>
   </head>
   <body>
-      <section class="section is-small hero is-danger">
+      <section class="section is-small hero is-warning">
           <div class="container has-text-centered">
-            <p class="subtitle is-2">Gather Passport</p>
+            <p class="subtitle is-2">Guardian Portal</p>
           </div>
       </section>
 
@@ -19,81 +19,68 @@
             <nav class="breadcrumb" aria-label="breadcrumbs">
                 <ul>
                   <li><a href="index.html">Home</a></li>
-                  <li class="is-active"><a href="#" aria-current="page">Sign Up</a></li>
+                  <li class="is-active"><a href="#" aria-current="page">Guardian Portal</a></li>
                 </ul>
             </nav>
-            
-            <div class="container pt-6">
-                <p class="subtitle is-4">
-                    Sign Up
-                </p>
-
-                <div class="field">
-                <label class="label">Name</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
-                </div>
-                </div>
-                
-                <div class="field">
-                    <label class="label">Username</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Text input">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Password</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Text input">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Text input">
-                    </div>
-                </div>
-                
-                <div class="field">
-                    <label class="label">Gender</label>
-                    <div class="control">
-                        <div class="select">
-                        <select>
-                            <option>Select</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Prefer not to mention</option>
-                        </select>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="field">
-                    <div class="control">
-                        <label class="radio">
-                        <input type="radio" name="question">
-                        Yes
-                        </label>
-                        <label class="radio">
-                        <input type="radio" name="question">
-                        No
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="field is-grouped">
-                <div class="control">
-                    <button class="button is-link">Submit</button>
-                </div>
-                <div class="control">
-                    <button class="button is-link is-light">Cancel</button>
-                </div>
-                </div>
-            </div>
         </div>
       </section>
+
+      <section class="section is-small">
+          <div class="columns">
+            <div class="column is-4 box">
+                <aside class="menu">
+                    <p class="menu-label">
+                      General
+                    </p>
+                    <ul class="menu-list">
+                      <li onclick="ShowProfile()"><a>Profile</a></li>
+                      <li onclick="ShowStudent()"><a>View Student Profiles</a></li>
+                      <li onclick="ShowLinkStudent()"><a>Link Students</a></li>
+                    </ul>
+                  </aside>
+            </div>
+            <div class="column box">
+                <p class="subtitle is-5" id="PR">Profile</p>
+                <p class="subtitle is-5 is-hidden" id="SP">Student Profiles</p>
+                <p class="subtitle is-5 is-hidden" id="LS">Link Students</p>
+            </div>
+          </div>
+      </section>
+
+      <script>
+          function ShowProfile() {
+            var ele = document.getElementById("PR")
+            ele.classList.remove("is-hidden")
+
+            var ele = document.getElementById("SP")
+            ele.classList.add("is-hidden")
+
+            var ele = document.getElementById("LS")
+            ele.classList.add("is-hidden")
+          }
+
+          function ShowStudent() {
+            var ele = document.getElementById("SP")
+            ele.classList.remove("is-hidden")
+
+            var ele = document.getElementById("PR")
+            ele.classList.add("is-hidden")
+
+            var ele = document.getElementById("LS")
+            ele.classList.add("is-hidden")
+          }
+
+          function ShowLinkStudent() {
+            var ele = document.getElementById("LS")
+            ele.classList.remove("is-hidden")
+
+            var ele = document.getElementById("PR")
+            ele.classList.add("is-hidden")
+
+            var ele = document.getElementById("SP")
+            ele.classList.add("is-hidden")
+          }
+      </script>
     
   </body>
 </html>
