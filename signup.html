@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
     <title>Sign Up Gather</title>
   </head>
   <body>
@@ -85,7 +86,7 @@
                 
                 <div class="field is-grouped">
                 <div class="control">
-                    <button class="button is-link">Submit</button>
+                    <button class="button is-link" onclick="NotifAppear('notif1')">Submit</button>
                 </div>
                 <div class="control">
                     <button class="button is-link is-light">Cancel</button>
@@ -93,7 +94,56 @@
                 </div>
             </div>
         </div>
+        
+        <div class="notification is-info Notif is-hidden" id = "notif1">
+            <div class="container pb-1 has-text-centered">
+                Please enter the verification code from your email
+            </div>
+            <input class="input is-link is-rounded" type="text" placeholder="Link input">
+            <div class="container pt-2 has-text-centered">
+                <div class="control">
+                    <button class="button is-link is-light" onclick="NotifAppear('notif2'); NotifRemove('notif1')">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="notification is-info Notif is-hidden" id = "notif2">
+            <div class="container pb-1 has-text-centered">
+                Success!
+            </div>
+            <div class="container pt-2 has-text-centered">
+                <div class="control">
+                    <a href="index.html" class="button">Ok</a>
+                </div>
+            </div>
+        </div>
+
       </section>
-    
+
+      <style>
+          .Notif {
+            position:absolute;
+            z-index:1;
+            top:40%;
+            left:40%;
+            right:40%;
+          }
+      </style>
+
+      <script>
+          function NotifRemove(ele) {
+            var element = document.getElementById(ele)
+            element.classList.add("is-hidden")
+          }
+
+          function NotifAppear(ele) {
+            var element = document.getElementById(ele)
+            element.classList.remove("is-hidden")
+          }
+
+          function ReturnHome() {
+              window.location.href = "index.html"
+          }
+      </script>
   </body>
 </html>
