@@ -37,8 +37,8 @@
 
       <section class="section is-small">
           <div class="columns">
-            <div class="column is-4 box">
-              <aside class="menu">
+            <div class="column is-4">
+              <aside class="menu box">
                 <p class="menu-label">
                   General
                 </p>
@@ -108,10 +108,12 @@
                       <p class="card-header-title">
                         Student 1
                       </p>
-                      <button class="card-header-icon" aria-label="more options">
-                        <span class="icon">
-                          <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
+                      <button class="card-header-icon"  aria-label="more options">
+                        <nav class="navbar-menu">
+                            <div class="navbar-item has-dropdown">
+                                <a href="#" class="navbar-link">&nbsp &nbsp</a>
+                            </div>
+                        </nav>
                       </button>
                     </header>
               
@@ -148,10 +150,12 @@
                       <p class="card-header-title">
                         Student 2
                       </p>
-                      <button class="card-header-icon" aria-label="more options">
-                        <span class="icon">
-                          <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
+                      <button class="card-header-icon"  aria-label="more options">
+                        <nav class="navbar-menu">
+                            <div class="navbar-item has-dropdown">
+                                <a href="#" class="navbar-link">&nbsp &nbsp</a>
+                            </div>
+                        </nav>
                       </button>
                     </header>
                     <div class="card-content">
@@ -180,7 +184,9 @@
                 </container>
               </div>
 
-              <p class="subtitle is-5 is-hidden" id="LS">Link Students</p>
+              <div id="LS" class = "is-hidden">
+                <p class="subtitle is-5">Link Students</p>
+              </div>
             </div>
                 
           </div>
