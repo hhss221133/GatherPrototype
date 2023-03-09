@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Student Portal</title>
+  </head>
+  <body>
+      <section class="section is-small hero is-warning">
+          <div class="container has-text-centered">
+            <p class="subtitle is-2">Student Portal</p>
+          </div>
+      </section>
+
+      <section class="section">
+        <div class="columns">
+          <div class="column is-four-fifths">
+            <div class="container px-6">
+              <nav class="breadcrumb" aria-label="breadcrumbs">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Student Portal</a></li>
+                  </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="column">
+            <a class="subtitle is-6 button is-outlined" href="signup.html">SIGN UP</a>
+          </div>
+          <div class="column">
+            <a class="subtitle is-6 button is-outlined" href="signup.html">SIGN IN</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section is-small">
+          <div class="columns">
+            <div class="column is-4 box">
+                <aside class="menu">
+                    <p class="menu-label">
+                      General
+                    </p>
+                    <ul class="menu-list">
+                      <li>
+                        <a>Account</a>
+                        <ul>
+                          <li onclick="ShowProfile()"><a>View</a></li>
+                          <li onclick=""><a>Edit</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a>Certificates</a>
+                        <ul>
+                          <li onclick="ShowStudent()"><a>View</a></li>
+                        </ul>
+                      </li>
+                      <li onclick="ShowLinkStudent()"><a>Link to Parent</a></li>
+                    </ul>
+                  </aside>
+            </div>
+            <div class="column box">
+                <p class="subtitle is-5" id="PR">Account</p>
+                <p class="">Name</p>
+                <p class="">Email</p>
+                <p class="">Linked Parent</p>
+                <p class="subtitle is-5 is-hidden" id="SP">Certificates</p>
+                <p class="subtitle is-5 is-hidden" id="LS">Link Students</p>
+            </div>
+          </div>
+      </section>
+
+      <script>
+          function ShowProfile() {
+            var ele = document.getElementById("PR")
+            ele.classList.remove("is-hidden")
+
+            var ele = document.getElementById("SP")
+            ele.classList.add("is-hidden")
+
+            var ele = document.getElementById("LS")
+            ele.classList.add("is-hidden")
+          }
+
+          function ShowStudent() {
+            var ele = document.getElementById("SP")
+            ele.classList.remove("is-hidden")
+
+            var ele = document.getElementById("PR")
+            ele.classList.add("is-hidden")
+
+            var ele = document.getElementById("LS")
+            ele.classList.add("is-hidden")
+          }
+
+          function ShowLinkStudent() {
+            var ele = document.getElementById("LS")
+            ele.classList.remove("is-hidden")
+
+            var ele = document.getElementById("PR")
+            ele.classList.add("is-hidden")
+
+            var ele = document.getElementById("SP")
+            ele.classList.add("is-hidden")
+          }
+      </script>
+    
+  </body>
+</html>
