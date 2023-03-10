@@ -11,7 +11,7 @@
   <body>
 
     <div class="section is-small">
-      <nav class="level">
+      <nav class="level is-mobile">
         <div class="level-item has-text-centered">
           <p class="title">
             <strong>GATHER</strong>
@@ -31,7 +31,7 @@
     </div>
 
 
-    <nav class="level navbar-menu is-active">
+    <nav class="level navbar-menu is-active" style="margin:0%;">
           <div class="level-item has-text-centered navbar-item is-tab">
             <a href="" class="navbar-item">About</a>
           </div>
@@ -79,4 +79,12 @@
       </container>
     </section>
   </body>
+
+  <style>
+    @media (max-width: 767px) {
+      .hidden-mobile {
+        display: none;
+      }
+    }
+  </style>
 </html>
