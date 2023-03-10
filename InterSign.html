@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Sign Up Gather</title>
+  </head>
+  <body>
+    <section class="section is-small hero is-danger">
+        <div class="container has-text-centered">
+        <p class="subtitle is-2">Gather Passport</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container px-6">
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li class="is-active"><a href="#" aria-current="page">Sign In</a></li>
+                </ul>
+            </nav>
+
+            <div class="container pt-6">
+                <p class="subtitle is-4">
+                    Sign In
+                </p>
+                
+                <div class="field">
+                    <label class="label">Username or Email</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input">
+                    </div>
+                </div>
+
+                <p class="">Forgot your password? <a href="" class="">Reset password</a></p>
+                <br>
+                
+                <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link" onclick="PickPortal()">Submit</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light">Cancel</button>
+                </div>
+                </div>
+
+                <br>
+                <p class="">If you don't have an account, <a href="signup.html" class="">Sign Up.</a></p>
+            </div>
+            
+        </div>
+
+    </section>
+
+  </body>
+
+  <script>
+    function PickPortal() {
+        var rand = Math.floor(Math.random()*3)
+        if(rand == 0) {
+            window.location.href = "Guardians.html"
+        }
+        else if(rand == 1) {
+            window.location.href = "Students.html"
+        }
+        else if(rand == 2) {
+            window.location.href = "Institutions.html"
+        }
+    }
+  </script>
+</html>
